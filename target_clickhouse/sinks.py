@@ -24,7 +24,7 @@ class ClickhouseSink(SQLSink):
     connector_class = ClickhouseConnector
 
     # Investigate larger batch sizes without OOM.
-    #MAX_SIZE_DEFAULT = 10000
+    MAX_SIZE_DEFAULT = 100000
     def conform_name(
         self,
         name: str,
